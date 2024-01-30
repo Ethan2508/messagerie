@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat Temporaire</title>
+    <link rel="stylesheet" type="text/css" href="chat.css">
+    <meta charset="utf-8">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Bienvenue sur un chat temporaire</h1>
+        <p>Entrez un pseudo pour commencer à discuter.</p>
+        <p style="font-size: 0.5rem;">Les informations sur le Chat son éphémere, elles disparraissent une fois l'utilisateur deconnecté.</p>
+        <form id="pseudoForm">
+            <input type="text" id="pseudoInput" placeholder="Votre pseudo" required>
+            <button type="submit">Commencer le Chat</button>
+        </form>
+    </div>
+
+    <script>
+        document.getElementById('pseudoForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const pseudo = document.getElementById('pseudoInput').value;
+            if (pseudo) {
+                sessionStorage.setItem('pseudo', pseudo);
+                // Redirigez ici vers la page de liste des utilisateurs/chat
+                window.location.href = 'users.html';
+            }
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Chat Temporaire - Utilisateurs</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.0.0/socket.io.js"></script>
+</head>
+<body>
+    <div class="chat-container">
+        <div id="users-panel" class="users-list">
+            <h2>Contacts</h2>
+            <div class="user">
+                Alice <span class="notification" id="notif-Alice">1</span>
+            </div>
+            <!-- Les utilisateurs en ligne seront injectés ici par le script JavaScript -->
+        </div>
+        <div id="conversation-panel" class="conversation">
+            <h2>Conversation</h2>
+            <!-- La conversation s'affichera ici lorsque l'utilisateur cliquera sur un nom d'utilisateur -->
+        </div>
+        
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
